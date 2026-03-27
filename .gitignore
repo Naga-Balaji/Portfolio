@@ -78,6 +78,19 @@ web_modules/
 .next
 out
 
+# Vercel
+.vercel
+
+# Local / OS
+.DS_Store
+*.pem
+
+# pnpm
+.pnpm-debug.log*
+
+# Next.js TypeScript (generated)
+next-env.d.ts
+
 # Nuxt.js build / generate output
 .nuxt
 dist
