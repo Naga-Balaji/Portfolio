@@ -22,7 +22,7 @@ function prefersReducedMotion() {
 function ScribbleRule() {
   return (
     <svg
-      className="mx-auto w-full max-w-lg px-4 text-[var(--v2-green-mid)] opacity-50 sm:px-0"
+      className="mx-auto w-full max-w-lg px-4 text-[var(--v2-green-mid)] opacity-50 sm:px-0 my-10"
       viewBox="0 0 480 20"
       aria-hidden
     >
