@@ -1,0 +1,106 @@
+/* Portfolio v2 — FC88-inspired: paper, greens, DIY craft (not a pixel copy) */
+.portfolio-v2-scope {
+  -webkit-tap-highlight-color: transparent;
+  --v2-paper: #f0ebe0;
+  --v2-paper-2: #e8e2d4;
+  --v2-ink: #1a221c;
+  --v2-ink-soft: #3d4a42;
+  --v2-green: #1e5c3a;
+  --v2-green-mid: #2d7a4e;
+  --v2-green-bright: #4ade80;
+  --v2-highlighter: #d9f99d;
+  --v2-crayon: #fca5a5;
+  --v2-border: rgba(26, 34, 28, 0.12);
+  background-color: var(--v2-paper);
+  color: var(--v2-ink);
+  font-family: var(--font-v2-sans), system-ui, sans-serif;
+}
+
+.portfolio-v2-scope .font-v2-hand {
+  font-family: var(--font-v2-hand), cursive;
+}
+
+.portfolio-v2-scope .font-v2-mono {
+  font-family: var(--font-geist-mono, ui-monospace), ui-monospace, monospace;
+}
+
+/* Subtle paper grain */
+.portfolio-v2-grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
+.portfolio-v2-nav-link {
+  touch-action: manipulation;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.portfolio-v2-nav-link:hover {
+  color: var(--v2-green-mid);
+  transform: translateX(2px);
+}
+
+.portfolio-v2-nav-link--active {
+  color: var(--v2-green);
+  font-weight: 700;
+}
+
+.portfolio-v2-nav-link--active:hover {
+  color: var(--v2-green);
+}
+
+.portfolio-v2-nav-chevron polygon {
+  fill: var(--v2-green);
+  transition: fill 0.3s ease;
+}
+
+.portfolio-v2-nav-chevron--white polygon {
+  fill: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-v2-nav-chevron {
+    transition: none !important;
+  }
+  .portfolio-v2-nav-chevron polygon {
+    transition: none !important;
+  }
+}
+
+.portfolio-v2-card {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+.portfolio-v2-card:hover {
+  transform: rotate(0deg) scale(1.01) !important;
+  box-shadow: 8px 12px 0 rgba(30, 92, 58, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-v2-card:hover {
+    transform: none !important;
+  }
+}
+
+/* Mobile: keep project cards upright; inline rotate is hard to read on narrow viewports */
+@media (max-width: 767px) {
+  .portfolio-v2-experience .portfolio-v2-card {
+    transform: none !important;
+  }
+
+  .portfolio-v2-experience .portfolio-v2-card:hover {
+    transform: scale(1.01) !important;
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  .portfolio-v2-experience .portfolio-v2-card:hover {
+    transform: none !important;
+  }
+}
