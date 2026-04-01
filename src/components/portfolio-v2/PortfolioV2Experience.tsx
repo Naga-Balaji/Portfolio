@@ -439,7 +439,8 @@ export function PortfolioV2Experience() {
               <strong className="font-semibold">Gamyam</strong>, focusing on{" "}
               <strong className="font-semibold">scalability</strong>,{" "}
               <strong className="font-semibold">performance</strong>, and{" "}
-              <strong className="font-semibold">user experience</strong>.
+              <strong className="font-semibold">user experience</strong>{" "}
+              <strong className="whitespace-nowrap font-semibold">(May 2025-Present)</strong>.
             </p>
 
             <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:grid-cols-2">
